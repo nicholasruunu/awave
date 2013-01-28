@@ -3,6 +3,7 @@
 ## Standard template
 
 ```js
+	"use strict";
 	// En själv-exekverande function (closure) används för att
 	// försäkra sig om att ingen ändrat på de viktigaste variablerna
 	(function($, window, document, undefined) {
@@ -20,10 +21,17 @@
 				var $images = $container.find('.slider-images');
 				var $display = $container.find('.slider-display');
 				var $next_button = $container.find('.slider-next');
+				// Vid vanliga värden så utesluts $
+				var container_height = $container.outerHeight();
 
 				$images.each(function() {
+					// Om $(this) anropas flera gånger, cacha i variabel
+					var $this = $(this);
 					// Bygg upp vad som behövs
-					...
+					$this.css({ color: 'black', background: 'white' });
+
+					// Använd aldrig px, jQuery förstår heltal
+					$this.height(container_height);
 				});
 
 				$display.bind({
@@ -48,4 +56,4 @@
 		});
 
 	})(jQuery, window, document);
-```
+``
