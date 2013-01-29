@@ -4,6 +4,7 @@
 
 ```js
 	"use strict";
+
 	// En själv-exekverande function (closure) används för att
 	// försäkra sig om att ingen ändrat på de viktigaste variablerna
 	(function($, window, document, undefined) {
@@ -34,6 +35,7 @@
 					$this.height(container_height);
 				});
 
+				// Registrera flera events
 				$display.bind({
 					show: function() {
 						// Visa bilden
@@ -46,7 +48,7 @@
 					}
 				});
 
-				// Registrera events
+				// Registrera ett event
 				$next_button.click(function() {
 					$display.trigger('next');
 				});
@@ -56,4 +58,4 @@
 		});
 
 	})(jQuery, window, document);
-``
+```
