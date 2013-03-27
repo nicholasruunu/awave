@@ -7,7 +7,7 @@
 
 	// En själv-exekverande function (closure) används för att
 	// försäkra sig om att ingen ändrat på de viktigaste variablerna
-	(function($, window, document, undefined) {
+	(function ($, Drupal, window, document, undefined) {
 
 		// jQuery ready (Sidan har laddats)
 		$(function() {
@@ -56,6 +56,5 @@
 				$display.trigger('show');
 			})();
 		});
-
-	})(jQuery, window, document);
-```
+	}(jQuery, Drupal, this, this.document));
+``
