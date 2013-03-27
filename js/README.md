@@ -3,11 +3,10 @@
 ## Standard template
 
 ```js
-	"use strict";
-
 	// En själv-exekverande function (closure) används för att
 	// försäkra sig om att ingen ändrat på de viktigaste variablerna
 	(function ($, Drupal, window, document, undefined) {
+		"use strict";
 
 		// jQuery ready (Sidan har laddats)
 		$(function() {
@@ -56,5 +55,5 @@
 				$display.trigger('show');
 			})();
 		});
-	}(jQuery, Drupal, this, this.document));
+	})(jQuery, Drupal, this, this.document);
 ```
