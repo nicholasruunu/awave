@@ -9,4 +9,4 @@ Alla uppmanas till förslag, ändringar och pull requests.
 
 ## Libs
 ### Javascript:
-[http://www.opentip.org - Tooltip][http://www.opentip.org]
+http://www.opentip.org - Tooltip
